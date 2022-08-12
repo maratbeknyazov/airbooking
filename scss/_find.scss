@@ -1,0 +1,68 @@
+@import "variables";
+
+.find{
+    @include flex(row,flex-start,wrap);
+}
+
+.find-img{
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.find-text{
+    padding: 30px 20px;
+    background-color: $blue;
+    color: $white;
+
+    h3{
+        @include text(28px,capitalize,none,$white);
+        font-family: 'Gilda Display', serif;
+    }
+
+    p{
+        line-height: 25px;
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        background-color: $white;
+        padding: 15px 30px;
+        @include head(16px,$silver);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .find-img{
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .find-img{
+        flex-basis: 60%;
+    }
+
+    .find-text{
+        flex-basis: 40%;
+        padding: 70px 40px;
+        
+        h3{
+            @include head(45px,$white);
+        }
+
+        p{
+            @include text(18px,none,none,$white);
+            line-height: 35px;
+            margin: 10px 0;
+        }
+
+        a{
+            @include text(25px,capitalize,none,$textSilver);
+        }
+    }
+}

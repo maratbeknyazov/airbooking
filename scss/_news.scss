@@ -1,0 +1,102 @@
+@import "variables";
+
+.news{
+    @include flex(row,space-between,wrap);
+}
+
+.news-head{
+    flex-basis: 100%;
+    text-align: center;
+    margin: 30px;
+
+    p{
+        @include head(32px,$headSilver);
+    }
+}
+
+.news-block{
+    overflow: hidden;
+    position: relative;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+
+    .news-block-img{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.news-block-infor{
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+
+    h3{
+        @include text(22px,none,none,$white);
+        font-family: 'Gilda Display', serif;
+        font-weight: 300;
+    }
+
+    p{
+        @include text(14px,none,none,$white);
+        margin: 5px 0;
+    }
+}
+
+
+.news-block-info{
+    position: absolute;
+    height: 100%;
+    width: 96%;
+    top: 100%;
+    background-color: $white;
+    padding: 20px 10px;
+    transition: 1s all;
+
+    h3{
+        @include head(25px,$headSilver);
+    }
+
+    p{
+        @include text(14px,none,none,$textSilver);
+        line-height: 25px;
+        margin: 5px 0;
+    }
+
+    a{
+        @include text(16px,none,none,$white);
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: $blue;
+        margin-top: 10px;
+    }
+}
+
+.news-block-img:hover ~ .news-block-info{
+    top: 0;
+    z-index: 2;
+}
+
+.news-block-info:hover{
+    top: 0;
+}
+
+@media only screen and (min-width:768px){
+    .news-block{
+        flex-basis: 48%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .news-head{
+        p{
+            @include head(45px,$headSilver);
+        }
+    }
+    
+    .news-block{
+        flex-basis: 33%;
+    }
+}

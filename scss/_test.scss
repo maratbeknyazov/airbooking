@@ -1,0 +1,76 @@
+@import "variables";
+
+.test-container{
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.test{
+    margin: 50px 0;
+    @include flex(row,center,wrap);
+}
+
+.test-head{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    p{
+        @include head(32px,$headSilver);
+        text-align: center;
+    }
+}
+
+.test-text{
+    flex-basis: 100%;
+    padding: 20px;
+
+    p{
+        line-height: 25px;
+        @include text(14px,none,none,$textSilver);
+    }
+}
+
+.test-info{
+    flex-basis: 100%;
+    text-align: center;
+
+    h3{
+        @include head(25px,$headSilver);
+    }
+
+    p{
+        padding-top: 10px;
+        @include head(14px,$headSilver);
+    }
+}
+
+@media only screen and (min-width:768px){
+
+    .test-text{
+        flex-basis: 60%;
+        box-shadow: 0 0 10px 0 #e7eff7;
+    }
+
+    .test-info{
+        text-align: start;
+        margin-top: 30px;
+        @include flex(row,center,nowrap);
+    }
+
+    .test-info-block{
+        margin-left: 10px;
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (min-width:1024px){
+
+    .test-head{
+        p{
+            font-size: 45px;
+        }
+    }
+
+    .test-text{
+        flex-basis: 45%;
+    }
+}

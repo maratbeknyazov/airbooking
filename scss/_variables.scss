@@ -1,0 +1,33 @@
+$brown: #c5a27f;
+$black: #000;
+$silver: #999999;
+$white: #fff;
+$blue: #0e6fb3;
+$exBlue: #eff4f8;
+$textSilver: #a0a0a0;
+$headSilver: #686868;
+$footerBg: #454545;
+$footerText: #cfcfcf;
+
+
+
+@mixin flex($fDir,$jCon,$fWrap) {
+    display: flex;
+    flex-direction: $fDir;
+    justify-content: $jCon;
+    flex-wrap: $fWrap;
+}
+
+@mixin  head($fSize, $color) {
+    font-size: $fSize;
+    font-family: 'Gilda Display', serif;
+    color: $color;
+    text-transform: null;
+}
+
+@mixin  text($fSize,$transform,$decoration,$color) {
+    font-size: $fSize;
+    text-transform: $transform;
+    text-decoration: $decoration;
+    color: $color;
+}

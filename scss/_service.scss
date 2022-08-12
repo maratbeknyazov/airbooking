@@ -1,0 +1,45 @@
+@import "variables";
+
+.service{
+    @include flex(row,space-between,wrap);
+    text-align: center;
+}
+
+.service-title{
+    flex-basis: 100%;
+    margin: 20px 0;
+    p{
+        @include head(32px,$headSilver);
+    }
+}
+
+.service-block{
+    padding: 10px;
+    margin-bottom: 20px;
+    flex-basis: 100%;
+
+    h2{
+        font-family: 'Gilda Display', serif;
+        @include text(25px,none,none,$headSilver);
+        margin: 20px 0;
+    }
+
+    p{
+        @include text(14px,none,none,$textSilver);
+        line-height: 25px;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .service-block{
+        flex-basis: 32%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .service-title{
+        p{
+            font-size: 45px;
+        }
+    }
+}

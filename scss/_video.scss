@@ -1,0 +1,40 @@
+@import "variables";
+
+.video{
+    background: url(../images/video.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 30px;
+}
+
+.video-container{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.video-title{
+    p{
+        @include head(32px,$white);
+    }
+}
+
+.video-link{
+    display: inline-block;
+    margin-top: 20px;
+    img{
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .video{
+        padding: 150px;
+    }
+
+    .video-title{
+        p{
+            font-size: 50px;
+        }
+    }
+}

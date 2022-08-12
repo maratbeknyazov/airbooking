@@ -1,0 +1,76 @@
+@import "variables";
+
+.explore{
+    background-color: $exBlue;
+    margin-top: 50px;
+}
+
+.explore-inner{
+    @include flex(row,flex-start,wrap);
+    position: relative;
+}
+
+.explore-inner-img{
+    flex-basis: 100%;
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.explore-inner-text{
+    margin: 20px 0;
+    flex-basis: 100%;
+    background-color: $white;
+    padding: 20px;
+
+    h3{
+        font-weight: 300;
+        margin-bottom: 20px;
+        @include head(32px,$headSilver);
+        text-transform: capitalize;
+    }
+
+    p{
+        font-weight: 300;
+        line-height: 25px;
+        @include text(14px,none,none,$textSilver);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .explore-inner{
+        padding: 50px 0;
+    }
+    
+    .explore-inner-img{
+        flex-basis: 75%;
+    }
+
+    .explore-inner-text{
+        max-width: 45%;
+        position: absolute;
+        top: 15%;
+        right: 0;
+
+        p{
+            line-height: 22px;
+        }
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .explore-inner-text{
+        top: 25%;
+        right: 20px;
+        h3{
+            font-size: 45px;
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
